@@ -40,6 +40,7 @@ mongoose.set('strictQuery', false);
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.imnaepp.mongodb.net/usersDB`, {
     useNewUrlParser: true,
   }).then(() => console.log("connent database"))
+  .catch(err => console.log( err ));
 
 const userSchema = new mongoose.Schema({
     name :{
