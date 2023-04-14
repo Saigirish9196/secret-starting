@@ -8,7 +8,14 @@
         <div class="card-body">
 
           <!-- Makes POST request to /register route -->
+          <div class="alert-danger" role="alert">
+            <%= message %> 
+          </div>
           <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="name" class="form-control" name="name">
+            </div>
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" name="username">
@@ -24,16 +31,29 @@
       </div>
     </div>
 
-    <!-- <div class="col-sm-4">
+    <div class="col-sm-4">
       <div class="card social-block">
         <div class="card-body">
-          <a class="btn btn-block" href="/auth/google" role="button">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
             <i class="fab fa-google"></i>
             Sign Up with Google
           </a>
         </div>
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-linkedin" href="/auth/linkedin" role="button">
+            <i class="fab fa-linkedin"></i>
+            Sign Up with linkedin
+          </a>
+        </div>
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-twitter" href="/auth/facebook" role="button">
+            <i class="fab fa-twitter"></i>
+            Sign Up with twitter
+          </a>
+        </div>
+      
       </div>
-    </div> -->
+    </div>
 
   </div>
 </div>
