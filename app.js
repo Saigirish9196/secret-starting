@@ -80,7 +80,7 @@ passport.deserializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/google/Secrets-Starting",
+  callbackURL: "/auth/google/Secrets-Starting",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
 function(accessToken, refreshToken, profile, cb) {
@@ -96,7 +96,7 @@ function(accessToken, refreshToken, profile, cb) {
 passport.use(new LinkedInStrategy({
   clientID: process.env.APP_ID,
   clientSecret: process.env.APP_SECRET,
-  callbackURL: "http://localhost:3000/auth/linkedin/Secrets-Starting",
+  callbackURL: "/auth/linkedin/Secrets-Starting",
   scope: ['r_emailaddress', 'r_liteprofile'],
   state: true
 }, function(accessToken, refreshToken, profile, done) {
