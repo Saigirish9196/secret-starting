@@ -96,7 +96,7 @@ function(accessToken, refreshToken, profile, cb) {
 passport.use(new LinkedInStrategy({
   clientID: process.env.APP_ID,
   clientSecret: process.env.APP_SECRET,
-  callbackURL: "https://secret-starting.onrender.com/auth/linkedin/Secrets-Starting",
+  callbackURL: "/auth/linkedin/Secrets-Starting",
   scope: ['r_emailaddress', 'r_liteprofile'],
   state: true
 }, function(accessToken, refreshToken, profile, done) {
